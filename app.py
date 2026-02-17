@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("register.html")
-@app.route("/confirm", methods=["GET","POST"])
+@app.route("/confirm", methods=["POST"])
 def register():
     if request.method == "POST":
         name = request.form.get("name")

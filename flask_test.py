@@ -18,7 +18,11 @@ def contacts():
 
 @app.route("/<name>")
 def name(name):
-    return 'Hi you landed in %s page!' % name
+    print(f"Hi you landed in {name} page!")
 
+
+@app.route("/view/<name>")
+def view(name):
+    return "you landed in %s page!" % name
 if __name__=="__main__":
     app.run(debug=True)
